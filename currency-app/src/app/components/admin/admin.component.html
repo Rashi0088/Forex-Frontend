@@ -32,7 +32,7 @@
             <!-- Card Header - Dropdown -->
             <div
                 class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">Admin İşlemleri</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Admin Operations</h6>
                 <div class="dropdown no-arrow">
                   <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
@@ -45,12 +45,12 @@
             <div class="card-body">
                 <table class="table table-borderless">
                   <thead>
-                    <th scope="col">Kullanıcı ID'si</th>
-                    <th scope="col">Kullanıcı Adı</th>
-                    <th scope="col">Kullanıcı Soyadı</th>
-                    <th scope="col">Kullanıcı Telefon Numarası</th>
-                    <th scope="col">Kullanıcı Bakiyesi</th>
-                    <th scope="col">İşlemler</th> <!-- Add a new header column for actions -->
+                    <th scope="col">User ID</th>
+                    <th scope="col">User name</th>
+                    <th scope="col">User Surname</th>
+                    <th scope="col">User Phone Number</th>
+                    <th scope="col">User Balance</th>
+                    <th scope="col">Transactions</th> <!-- Add a new header column for actions -->
                     <th scope="col">Delete</th> <!-- Add a new header column for actions -->
                   </thead>
                   <tbody>
@@ -104,10 +104,10 @@
                         </button>
                         
                         <!-- Button to save changes (displayed only in edit mode) -->
-                        <button *ngIf="editMode[i]" (click)="saveChanges(i, user)">Kaydet</button>
+                        <button *ngIf="editMode[i]" (click)="saveChanges(i, user)">Save</button>
                       </td>
                       <td>
-                        <button  (click)="deleteUser(user.username)">Kullanıcı Sil</button>
+                        <button  (click)="deleteUser(user.username)">Delete User</button>
                       </td>
                     </tr>
                   </tbody>

@@ -35,7 +35,7 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                               İşlem Adedim </div>
+                                Number of Transactions </div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">{{ transactionNumber }}</div>
                         </div>
                         <div class="col-auto">
@@ -62,7 +62,7 @@
                 <!-- Card Header - Dropdown -->
                 <div
                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Son İşlemlerim</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">My Recent Transactions</h6>
                     <div class="dropdown no-arrow">
                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -75,11 +75,11 @@
                 <div class="card-body">
                     <table class="table table-borderless">
                         <thead>
-                            <th scope="col">İşlem Numarası</th>
-                            <th scope="col">Coin Adı</th>
-                            <th scope="col">Coin Hacmi</th>
-                            <th scope="col">Coin Tutarı $</th>
-                            <th scope="col">İşlem Türü</th>
+                            <th scope="col">Transaction number</th>
+                            <th scope="col">Coin Name</th>
+                            <th scope="col">Coin Volume</th>
+                            <th scope="col">Coin Amount $</th>
+                            <th scope="col">Operation type</th>
                         </thead>
                         <tbody>
                             <ng-container *ngFor="let transaction of user.transactions.slice(startIndex, endIndex); let i = index">
@@ -113,7 +113,7 @@
         <div class="col-xl-4 col-lg-5">
             <div class="card shadow mb-4">
               <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">Adet Olarak Dağılım Grafiği</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Distribution Chart in Quantity</h6>
               </div>
               <div class="card-body">
                 <canvas #pieChart></canvas>
@@ -122,7 +122,7 @@
             <br>
             <div class="card shadow mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Fiyat Olarak Dağılım Grafiği</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Scatter Chart in Price</h6>
                 </div>
                 <div class="card-body">
                   <canvas #pieChartPrice></canvas>
