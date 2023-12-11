@@ -9,36 +9,36 @@
         <!-- Default Card Example -->
         <div class="card mb-4">
             <div class="card-header">
-                Satın Alma İşlemleri
+                Buying processes
             </div>
             <div class="card-body">
                 <div class = "row">
                     <div class="col-lg-6">
-                        <button  class="btn btn-lg btn-primary">{{ currName }} Coin Satın Alma İşlemi</button>
+                        <button  class="btn btn-lg btn-primary">{{ currName }} Coin Purchasing Process</button>
                         <br>
-                        <button  class="btn btn-lg btn-success mt-4">Anlık fiyatı : {{ currPrice  }}$</button>
+                        <button  class="btn btn-lg btn-success mt-4">Current price:{{ currPrice  }}$</button>
                         <br>
-                        <button  class="btn btn-lg btn-success mt-4" [value]="balance">Bakiyende Bulunan Miktar : {{ balance }} $</button>
+                        <button  class="btn btn-lg btn-success mt-4" [value]="balance">Amount in Your Balance: {{ balance }} $</button>
 
                     </div>
                     <div class=col-lg-6>
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Satın Al!</h1>
+                                <h1 class="h4 text-gray-900 mb-4">Buy!</h1>
                             </div>
                             <form class="user">
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-user" 
                 
-                                    placeholder="Almak istediğiniz miktarı giriniz" [(ngModel)]="miktar" (input)="calculateDollarEquivalent()" name="miktar">
+                                    placeholder="Enter the amount you want to buy" [(ngModel)]="miktar" (input)="calculateDollarEquivalent()" name="miktar">
                                 </div>
                                 <div class="form-group" [ngClass]="affordableStatusClass">
                                     <input type="text" class="form-control form-control-user" [ngClass]="affordableStatusClass"
-                                    placeholder="Dolar Bazında Karşılığı : $" [value]="dolarKarsiligi.toFixed(2)" readonly name="dolarKarsiligi">
+                                    placeholder="Equivalent in Dollar Basis: $" [value]="dolarKarsiligi.toFixed(2)" readonly name="dolarKarsiligi">
                                 </div>
                                 
                                 <button (click)="buy()" class="btn btn-primary btn-user btn-block">
-                                    Satın Al
+                                    Buy
                                 </button>
                                 <hr>
                                 <div *ngIf="transactionStatus" class="alert " [ngClass]="transactionStatusClass" >{{ transactionStatus }}</div>
@@ -55,36 +55,36 @@
 
         <div class="card mb-4">
             <div class="card-header">
-                Coin Satma İşlemleri
+                Coin Selling Transactions
             </div>
             <div class="card-body">
                 <div class = "row">
                     <div class="col-lg-6">
-                        <button  class="btn btn-lg btn-primary">{{ currName }} Coin Satma İşlemi</button>
+                        <button  class="btn btn-lg btn-primary">{{ currName }} Coin Selling Process</button>
                         <br>
-                        <button  class="btn btn-lg btn-success mt-4">Anlık fiyatı : {{ currPrice  }}$</button>
+                        <button  class="btn btn-lg btn-success mt-4">Current price:{{ currPrice  }}$</button>
                         <br>
-                        <button  class="btn btn-lg btn-success mt-4" [value]="availableCurrency">Bakiyende Bulunan Miktar : {{ availableCurrency }} Adet</button>
+                        <button  class="btn btn-lg btn-success mt-4" [value]="availableCurrency">Amount in Your Balance: {{ availableCurrency }} Piece</button>
 
                     </div>
                     <div class=col-lg-6>
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Satış Yap!</h1>
+                                <h1 class="h4 text-gray-900 mb-4">Sell!</h1>
                             </div>
                             <form class="user">
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-user" 
                 
-                                    placeholder="Satmak istediğiniz miktarı giriniz" [(ngModel)]="miktar_coin" (input)="calculateDollarEquivalent_coin()" name="miktar_coin">
+                                    placeholder="Enter the amount you want to sell" [(ngModel)]="miktar_coin" (input)="calculateDollarEquivalent_coin()" name="miktar_coin">
                                 </div>
                                 <div class="form-group" [ngClass]="affordableStatusClass">
                                     <input type="text" class="form-control form-control-user" [ngClass]="affordableStatusClass"
-                                    placeholder="Dolar Bazında Karşılığı : $" [value]="dolarKarsiligi_coin.toFixed(2)" readonly name="dolarKarsiligi_coin">
+                                    placeholder="Equivalent in Dollar Basis: $" [value]="dolarKarsiligi_coin.toFixed(2)" readonly name="dolarKarsiligi_coin">
                                 </div>
                                 
                                 <button (click)="sell()" class="btn btn-primary btn-user btn-block">
-                                    Satış Yap
+                                    Sell
                                 </button>
                                 <hr>
                                 <div *ngIf="transactionStatus_coin" class="alert " [ngClass]="transactionStatusClass" >{{ transactionStatus_coin }}</div>
@@ -99,13 +99,13 @@
             </div>
         </div>
         <div class="card-body">
-            <h3>Son Yapılan İşlemler</h3>
+            <h3>Recent Transactions</h3>
 
             <table class="table table-borderless">
                 <thead>
-                    <th scope="col">Dolar Hacmi</th>
-                    <th scope="col">Coin Adeti</th>
-                    <th scope="col">İşlem Türü</th>
+                    <th scope="col">Dollar Volume</th>
+                    <th scope="col">Quantity of Coins</th>
+                    <th scope="col">Operation type</th>
                 </thead>
 
                 <tbody>

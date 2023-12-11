@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
     
     this.userService.getLoginStatus().subscribe((loginStatus) => {
       this.loginStatus = loginStatus;
-      if(loginStatus == "Kullanici adi ya da şifre hatali!"){
+      if(loginStatus == "Username or password is incorrect!"){
         this.loginStatusClass = "alert-danger";
       }else{
         this.loginStatusClass = "alert-success";
